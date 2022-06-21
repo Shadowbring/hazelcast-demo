@@ -7,6 +7,7 @@ hazelcast:
         enabled: false
       aws:
         enabled: true
+        host-header: ec2
     interfaces:
       enabled: true
       interfaces:
