@@ -1,0 +1,38 @@
+hazelcast:
+  cluster-name: dbezruk
+  instance-name: hz-demo
+  network:
+    join:
+      multicast:
+        enabled: true
+#      aws:
+#        enabled: true
+#    interfaces:
+#      enabled: true
+#      interfaces:
+#        - 172.21.*.*
+  management-center:
+    scripting-enabled: true
+    console-enabled: true
+    data-access-enabled: true
+  rest-api:
+    enabled: true
+    endpoint-groups:
+      CLUSTER_READ:
+        enabled: true
+      CLUSTER_WRITE:
+        enabled: true
+      HEALTH_CHECK:
+        enabled: true
+      DATA:
+        enabled: true
+      CP:
+        enabled: true
+  metrics:
+    collection-frequency-seconds: 5
+    enabled: true
+    management-center:
+      retention-seconds: 5
+      enabled: true
+    jmx:
+      enabled: true
